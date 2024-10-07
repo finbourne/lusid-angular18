@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# We don;t want to commit the swagger file
+swagger.json

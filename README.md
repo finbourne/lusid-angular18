@@ -1,3 +1,5 @@
+![LUSID_by_Finbourne](./resources/Finbourne_Logo_Teal.svg)
+
 # LusidAngular18
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.

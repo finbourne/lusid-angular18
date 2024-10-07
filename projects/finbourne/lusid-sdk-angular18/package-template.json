@@ -1,0 +1,23 @@
+{
+  "name": "@finbourne/lusid-sdk-angular{NG_MAJOR_VERSION}",
+  "version": "{API_VERSION}",
+  "description": "An Angular ({NG_MAJOR_VERSION}) SDK for secure access to the LUSID&reg; by FINBOURNE web API",
+  "keywords": [
+    "LUSID",
+    "Finbourne",
+    "SDK",
+    "angular",
+    "angular{NG_MAJOR_VERSION}"
+  ],
+  "homepage": "https://github.com/finbourne/lusid-angular{NG_MAJOR_VERSION}/tree/master/projects/lusid-sdk-angular{NG_MAJOR_VERSION}",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finbourne/lusid-angular{NG_MAJOR_VERSION}"
+  },
+  "license": "SEE LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/finbourne/lusid-angular{NG_MAJOR_VERSION}/issues",
+    "email": "lusid-sdk-angular{NG_MAJOR_VERSION}.issues@finbourne.com"
+  },
+  "sideEffects": false
+}
