@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@finbourne/lusid-sdk-angular18": {
+      "projectType": "library",
+      "root": "projects/finbourne/lusid-sdk-angular18",
+      "sourceRoot": "projects/finbourne/lusid-sdk-angular18/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/finbourne/lusid-sdk-angular18/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/finbourne/lusid-sdk-angular18/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/finbourne/lusid-sdk-angular18/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/finbourne/lusid-sdk-angular18/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
