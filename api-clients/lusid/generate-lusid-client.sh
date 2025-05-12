@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 set -euo pipefail
 
@@ -35,6 +35,7 @@ then
         -g typescript-angular \
         -o $scriptDir/$outputDir \
         -i $swaggerUrl \
+        --reserved-words-mappings package=package \
         --type-mappings object=any \
         --type-mappings Object=any \
         --type-mappings DateTime=string \
@@ -49,6 +50,7 @@ else
         -g typescript-angular \
         -o /local/$outputDir \
         -i $swaggerUrl \
+        --reserved-words-mappings package=package \
         --type-mappings object=any \
         --type-mappings Object=any \
         --type-mappings DateTime=string \
