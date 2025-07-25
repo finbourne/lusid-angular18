@@ -73,6 +73,12 @@ popd
 # Handle the issue with the generated model/params.ts exporting a DataType class, which we also generate
 if [ -f $scriptDir/$outputDir/index.ts ]; then
   echo "Aliasing the export of generated param.ts from $scriptDir/$outputDir/index.ts (otherwise DataType is declared in 2 places)"
-  sed -i "s@export \* from './param'@export \* as OpenApi from './param'@" $scriptDir/$outputDir/index.ts
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    sed -i "" "s@export \* from './param'@export \* as OpenApi from './param'@" $scriptDir/$outputDir/index.ts
+  else
+    # Linux/Windows
+    sed -i "s@export \* from './param'@export \* as OpenApi from './param'@" $scriptDir/$outputDir/index.ts
+  fi
   echo
 fi
