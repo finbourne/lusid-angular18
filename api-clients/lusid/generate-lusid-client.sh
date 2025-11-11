@@ -44,8 +44,8 @@ then
         --additional-properties useSingleRequestParameter=$useSingleRequestParameter \
         --additional-properties ngVersion=$ngVersion
 else
-  echo "Generating using docker hosted openapi-generator-cli"
-  MSYS_NO_PATHCONV=1 docker run --rm -v $scriptDir:/local \
+  echo "Generating using podman hosted openapi-generator-cli"
+  MSYS_NO_PATHCONV=1 podman run --rm -v $scriptDir:/local \
       openapitools/openapi-generator-cli:v$generatorVersion generate \
         -g typescript-angular \
         -o /local/$outputDir \
